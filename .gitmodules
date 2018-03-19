@@ -1,6 +1,6 @@
 [submodule "vendor/github.com/gorilla/mux"]
 	path = vendor/github.com/gorilla/mux
 	url = https://github.com/gorilla/mux.git
-[submodule "vendor/ipsoft.net/amelia-go-sdk"]
+[submodule "vendor/github.com/MagicTheGathering/mtg-sdk-go"]
 	path = vendor/github.com/MagicTheGathering/mtg-sdk-go
-	url = github.com/MagicTheGathering/mtg-sdk-go.git
+	url = https://github.com/MagicTheGathering/mtg-sdk-go.git
