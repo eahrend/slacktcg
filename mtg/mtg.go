@@ -1,18 +1,17 @@
 package mtg
 
 import (
-	"io/ioutil"
-	"log"
+	"encoding/json"
 	"net/http"
+
+	"github.com/nlopes/slack"
 )
 
 func CardSearch(w http.ResponseWriter, r *http.Request) {
 	// Do card search stuff here
-	body_bytes, err := ioutil.ReadAll(r.Body)
-	if err != nil {
-		log.Fatal(err)
-	}
-	w.Write(body_bytes)
+	cmd, _ := slack.SlashCommandParse(r)
+	b, _ := json.Marshal(&cmd)
+	w.Write(b)
 	/*
 		card, err := sdk.NewQuery().Random(1)
 		if err != nil {
